@@ -1,0 +1,24 @@
+{
+  "name": "electron-update-helper",
+  "version": "1.0.0",
+  "description": "a package for electron-updater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitliyu:liyu19960704@github.com/gitliyu/electron-update-helper.git"
+  },
+  "keywords": [
+    "electron",
+    "electron-builder",
+    "electron-updater"
+  ],
+  "author": "1042625709@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitliyu/electron-update-helper/issues"
+  },
+  "homepage": "https://github.com/gitliyu/electron-update-helper#readme"
+}
