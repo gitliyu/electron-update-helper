@@ -1,0 +1,44 @@
+<!--渲染进程-->
+<body>
+<button onclick="onUpdate">检查更新</button>
+</body>
+<script>
+  import {RenderHelper} from 'electron-update-helper'
+
+  let renderHelper = new RenderHelper();
+
+  // 更新通知的处理函数，参数为以下四种提示
+  renderHelper.setMessageHandle(message => {
+    switch (message) {
+      case 'error':
+        alert('更新异常');
+        break;
+      case 'checking':
+        alert('开始检查更新');
+        break;
+      case 'update':
+        alert('正在下载更新中');
+        break;
+      case 'new':
+        alert('当前是最新版本，无需更新');
+        break;
+    }
+  });
+
+  // 进度条处理函数，参数为进度条对象
+  renderHelper.setProgressHandle(progressObj => {
+    console.log(`当前更新进度为${progressObj.percent}`);
+  });
+
+  // 更新完成后的回调，参数为一个事件，当done方法被调用时，会退出并执行更新
+  renderHelper.setUpdatedHandle(done => {
+    if (confirm('已下载完成,现在退出并更新吗？')) {
+      done();
+    }
+  });
+
+  function onUpdate() {
+    // 触发更新
+    renderHelper.checkForUpdates();
+  }
+</script>
