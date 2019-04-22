@@ -90,5 +90,5 @@ renderHelper.setUpdatedHandle(done => {
 ```
 
 ### 依赖
-- ['Electron-builder'](https://www.npmjs.com/package/electron-builder)
+- ['electron-builder'](https://www.npmjs.com/package/electron-builder)
 - ['electron-updater'](https://www.npmjs.com/package/electron-updater)
