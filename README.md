@@ -3,7 +3,6 @@
 依赖`electron-builder`和`electron-updater`的`electron`版本更新方法，基于原有方法进行了封装，易于使用
 
 ### 安装
-使用npm
 ```
 npm install electron-update-helper
 ```
@@ -25,13 +24,13 @@ app.on('ready', () => {
   new MainHelper(mainWindow, URL);
 });
 ```
-渲染进程中，使用`RenderHelper`
+渲染进程中，使用`RenderHelper`，详见['demo'](https://github.com/gitliyu/electron-update-helper/blob/master/demo/render.html)
 ```
 import {RenderHelper} from 'electron-update-helper'
 
 let renderHelper = new RenderHelper();
 ```
-渲染进程事件，详见['demo'](https://github.com/gitliyu/electron-update-helper/blob/master/demo/render.html)
+渲染进程事件
 - `checkForUpdates`: 触发版本更新
 ```javascript
 renderHelper.checkForUpdates();
@@ -91,5 +90,5 @@ renderHelper.setUpdatedHandle(done => {
 ```
 
 ### 依赖
-- ['Electron-builder'](https://www.npmjs.com/package/electron-builder)
+- ['electron-builder'](https://www.npmjs.com/package/electron-builder)
 - ['electron-updater'](https://www.npmjs.com/package/electron-updater)
