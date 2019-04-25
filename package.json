@@ -1,6 +1,6 @@
 {
   "name": "electron-update-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a package for electron-updater",
   "main": "index.js",
   "scripts": {
