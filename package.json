@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitliyu:liyu19960704@github.com/gitliyu/electron-update-helper.git"
+    "url": "git+https://github.com/gitliyu/electron-update-helper.git"
   },
   "keywords": [
     "electron",
